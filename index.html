@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saklain Abdullah | Academic Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandRed: "#dc2626",
+              brandDark: "#0f172a" /* slate-900 */,
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .nav-hover:hover {
+        color: #dc2626 !important;
+      }
+      .fade-in {
+        animation: fadeIn 0.4s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* High-contrast dark shadow effect for light cards */
+      .brutal-card {
+        background-color: #ffffff;
+        border: 2px solid #0f172a;
+        box-shadow: 6px 6px 0px 0px #0f172a;
+        transition: all 0.2s ease-in-out;
+      }
+      .brutal-card:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 8px 8px 0px 0px #dc2626;
+        border-color: #0f172a;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-50 text-slate-800 min-h-screen flex flex-col relative font-sans selection:bg-red-100 selection:text-red-700"
+  >
+    <!-- DARK NAVIGATION BAR (Harmonious Balance) -->
+    <nav
+      class="fixed w-full bg-slate-900 text-slate-100 z-40 border-b-4 border-red-600 shadow-lg"
+    >
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-14 sm:h-16">
+          <div
+            class="flex items-center space-x-2 cursor-pointer"
+            onclick="window.scrollTo(0, 0)"
+          >
+            <span class="text-white text-lg font-extrabold tracking-wider"
+              >SAKLAIN<span class="text-red-500">.</span></span
+            >
+            <span
+              class="text-[10px] bg-slate-800 text-slate-300 border border-slate-600 px-2 py-0.5 rounded font-mono hidden sm:inline-block"
+            >
+              PhD APPLICANT
+            </span>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="flex items-center space-x-4">
+              <a
+                href="#about"
+                class="text-slate-300 nav-hover text-sm font-medium transition-colors"
+                >About</a
+              >
+              <a
+                href="#teaching"
+                class="text-slate-300 nav-hover text-sm font-medium transition-colors"
+                >Teaching</a
+              >
+              <a
+                href="#research"
+                class="text-slate-300 nav-hover text-sm font-medium transition-colors"
+                >Research</a
+              >
+              <a
+                href="#professional"
+                class="text-slate-300 nav-hover text-sm font-medium transition-colors"
+                >Professional</a
+              >
+              <a
+                href="#publications"
+                class="text-slate-300 nav-hover text-sm font-medium transition-colors"
+                >Publications</a
+              >
+              <a
+                href="mailto:saklain.a@eastdelta.edu.bd"
+                class="ml-2 px-3 py-1.5 bg-red-600 hover:bg-red-500 text-white text-xs font-bold rounded transition flex items-center gap-1.5 shadow-sm"
+              >
+                <i class="fas fa-envelope"></i> Contact
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile Hamburger -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-slate-300 hover:text-white focus:outline-none"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden bg-slate-800 border-b border-slate-700 px-4 pt-2 pb-4 space-y-2 absolute w-full shadow-lg"
+      >
+        <a
+          href="#about"
+          class="text-slate-200 block px-3 py-2 hover:bg-slate-700 rounded text-sm"
+          >About</a
+        >
+        <a
+          href="#teaching"
+          class="text-slate-200 block px-3 py-2 hover:bg-slate-700 rounded text-sm"
+          >Teaching</a
+        >
+        <a
+          href="#research"
+          class="text-slate-200 block px-3 py-2 hover:bg-slate-700 rounded text-sm"
+          >Research</a
+        >
+        <a
+          href="#professional"
+          class="text-slate-200 block px-3 py-2 hover:bg-slate-700 rounded text-sm"
+          >Professional</a
+        >
+        <a
+          href="#publications"
+          class="text-slate-200 block px-3 py-2 hover:bg-slate-700 rounded text-sm"
+          >Publications</a
+        >
+        <a
+          href="mailto:saklain.a@eastdelta.edu.bd"
+          class="text-red-400 font-bold block px-3 py-2 text-sm"
+        >
+          <i class="fas fa-envelope mr-1"></i> Email Me
+        </a>
+      </div>
+    </nav>
+
+    <!-- MAIN SINGLE-COLUMN CONTAINER -->
+    <main
+      class="pt-20 sm:pt-24 flex-grow max-w-3xl mx-auto px-4 sm:px-6 w-full space-y-12 py-8 fade-in"
+    >
+      <!-- HERO / PROFILE SECTION -->
+      <section id="about" class="text-center pt-2 space-y-6">
+        <!-- Circular Profile Image via Google Drive Link -->
+        <div class="relative inline-block">
+          <img
+            src="https://drive.google.com/file/d/1YU8VmRM6t0NmzieIxMN6ToryvP6rL51H/view?usp=sharing"
+            alt="Saklain Abdullah"
+            class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover object-top border-4 border-white shadow-xl ring-4 ring-slate-900 mx-auto bg-slate-200"
+          />
+          <span
+            class="absolute bottom-2 right-2 w-5 h-5 bg-emerald-500 border-2 border-white rounded-full shadow-md"
+            title="Available for PhD Opportunities"
+          ></span>
+        </div>
+
+        <div class="space-y-3">
+          <h1
+            class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight"
+          >
+            Saklain Abdullah
+          </h1>
+          <p
+            class="text-base sm:text-lg text-red-600 font-bold tracking-wide uppercase text-sm"
+          >
+            Lecturer in Computer Science & AI Researcher
+          </p>
+          <p
+            class="text-sm sm:text-base text-slate-700 leading-relaxed max-w-2xl mx-auto font-medium"
+          >
+            Lecturer at East Delta University specializing in Natural Language
+            Processing, Vision-Language Model security, and Physics-Informed AI.
+            Combining hands-on industry software engineering experience with
+            academic research to build robust, trustworthy machine learning
+            systems.
+          </p>
+        </div>
+
+        <!-- CATCHY EDUCATION SECTION -->
+        <div
+          class="brutal-card rounded-xl p-4 flex flex-col items-center justify-center text-center gap-1 mt-2 bg-slate-900 text-white"
+        >
+          <i class="fas fa-graduation-cap text-2xl text-red-500 mb-1"></i>
+          <h2
+            class="text-lg sm:text-xl font-black text-slate-50 uppercase tracking-wide"
+          >
+            Bachelor of Science in <br class="hidden sm:block" />
+            Computer Science and Engineering
+          </h2>
+          <div class="h-1 w-12 bg-red-500 my-1 rounded-full"></div>
+          <p class="text-xs sm:text-sm text-slate-300 font-medium">
+            Chittagong University of Engineering and Technology (CUET) • 2023
+          </p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex flex-wrap justify-center gap-3 pt-2">
+          <a
+            href="https://scholar.google.com/citations?user=tTvgIAYAAAAJ&hl=en"
+            target="_blank"
+            class="px-4 py-2 brutal-card rounded-lg text-slate-900 text-sm font-bold flex items-center gap-2"
+          >
+            <i class="fas fa-graduation-cap text-red-600 text-base"></i> Google
+            Scholar
+          </a>
+          <a
+            href="https://github.com/SaklainAbdullah"
+            target="_blank"
+            class="px-4 py-2 brutal-card rounded-lg text-slate-900 text-sm font-bold flex items-center gap-2"
+          >
+            <i class="fab fa-github text-slate-900 text-base"></i> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/saklain-abdullah/"
+            target="_blank"
+            class="px-4 py-2 brutal-card rounded-lg text-slate-900 text-sm font-bold flex items-center gap-2"
+          >
+            <i class="fab fa-linkedin text-blue-700 text-base"></i> LinkedIn
+          </a>
+        </div>
+      </section>
+
+      <!-- RESEARCH EXPERIENCE -->
+      <section id="research" class="space-y-5">
+        <div class="flex items-center gap-2 border-b-2 border-slate-900 pb-2">
+          <div class="bg-slate-900 text-white p-1.5 rounded-lg">
+            <i class="fas fa-microscope text-lg"></i>
+          </div>
+          <h2 class="text-xl font-black text-slate-900 uppercase tracking-wide">
+            Research Experience
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Research Card 1 -->
+          <div class="brutal-card rounded-xl p-4">
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
+            >
+              <h3 class="font-black text-slate-900 text-base sm:text-lg">
+                Physics-Informed AI in Renewable Energy
+              </h3>
+              <span
+                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                >Jan 2026 – Present</span
+              >
+            </div>
+            <p class="text-xs font-bold text-red-600 mb-2 flex items-center">
+              <i class="fas fa-flask mr-1.5"></i> Research Lead: Dr. K. M
+              Mohibul Kabir
+            </p>
+            <p class="text-sm text-slate-700 font-medium leading-snug">
+              Integrating physical laws into neural network architectures to
+              optimize and model complex renewable energy systems.
+            </p>
+          </div>
+
+          <!-- Research Card 2 -->
+          <div class="brutal-card rounded-xl p-4">
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
+            >
+              <h3 class="font-black text-slate-900 text-base sm:text-lg">
+                LLM/VLM Security & Robustness
+              </h3>
+              <span
+                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                >Mar 2025 – Present</span
+              >
+            </div>
+            <p class="text-xs font-bold text-red-600 mb-2 flex items-center">
+              <i class="fas fa-flask mr-1.5"></i> Supervisor: Dr. Mahfuzulhoq
+              Chowdhury
+            </p>
+            <p class="text-sm text-slate-700 font-medium leading-snug">
+              Investigating vulnerabilities in large language and
+              Vision-Language models, focusing on scenario-based jailbreaking,
+              visual jailbreaks, and modality imbalances.
+            </p>
+          </div>
+
+          <!-- Research Card 3 -->
+          <div class="brutal-card rounded-xl p-4">
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
+            >
+              <h3 class="font-black text-slate-900 text-base sm:text-lg">
+                Bengali Language Processing Thesis
+              </h3>
+              <span
+                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                >Jan 2022 – Nov 2023</span
+              >
+            </div>
+            <p class="text-xs font-bold text-red-600 mb-2 flex items-center">
+              <i class="fas fa-flask mr-1.5"></i> Advisor: Md Shafiul Alam
+              Forhad (CUET)
+            </p>
+            <p class="text-sm text-slate-700 font-medium leading-snug">
+              Researched transformer-based text classification architectures
+              tailored to Bengali computational linguistics.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROFESSIONAL EXPERIENCE -->
+      <section id="professional" class="space-y-5">
+        <div class="flex items-center gap-2 border-b-2 border-slate-900 pb-2">
+          <div class="bg-slate-900 text-white p-1.5 rounded-lg">
+            <i class="fas fa-briefcase text-lg"></i>
+          </div>
+          <h2 class="text-xl font-black text-slate-900 uppercase tracking-wide">
+            Professional Experience
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Professional Card 1 -->
+          <div class="brutal-card rounded-xl p-4">
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
+            >
+              <h3 class="font-black text-slate-900 text-base sm:text-lg">
+                Lecturer, Dept. of CSE
+              </h3>
+              <span
+                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                >Jan 2024 – Present</span
+              >
+            </div>
+            <p class="text-xs font-bold text-slate-800 mb-2 flex items-center">
+              <i class="fas fa-university text-red-600 mr-1.5"></i> East Delta
+              University, Chattogram
+            </p>
+            <p class="text-sm text-slate-700 font-medium leading-snug">
+              Conducting lectures and coursework in Software Engineering,
+              Artificial Intelligence, Structured Programming, and Data
+              Structures.
+            </p>
+          </div>
+
+          <!-- Professional Card 2 -->
+          <div class="brutal-card rounded-xl p-4">
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
+            >
+              <h3 class="font-black text-slate-900 text-base sm:text-lg">
+                Software Engineer (Remote)
+              </h3>
+              <span
+                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                >Jul 2023 – May 2025</span
+              >
+            </div>
+            <p class="text-xs font-bold text-slate-800 mb-2 flex items-center">
+              <i class="fas fa-building text-red-600 mr-1.5"></i> Bevy Commerce
+              Inc
+            </p>
+            <p class="text-sm text-slate-700 font-medium leading-snug">
+              Engineered web applications and production features within global
+              remote engineering workflows.
+            </p>
+          </div>
+
+          <!-- Professional Card 3 -->
+          <div class="brutal-card rounded-xl p-4">
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
+            >
+              <h3 class="font-black text-slate-900 text-base sm:text-lg">
+                Lead Instructor
+              </h3>
+              <span
+                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                >Former</span
+              >
+            </div>
+            <p class="text-xs font-bold text-slate-800 mb-2 flex items-center">
+              <i class="fas fa-chalkboard-teacher text-red-600 mr-1.5"></i>
+              Ostad (EdTech)
+            </p>
+            <p class="text-sm text-slate-700 font-medium leading-snug">
+              Taught web development concepts and full-stack curriculum to
+              aspiring software developers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SELECTED PUBLICATIONS -->
+      <section id="publications" class="space-y-5">
+        <div class="flex items-center gap-2 border-b-2 border-slate-900 pb-2">
+          <div class="bg-slate-900 text-white p-1.5 rounded-lg">
+            <i class="fas fa-book-bookmark text-lg"></i>
+          </div>
+          <h2 class="text-xl font-black text-slate-900 uppercase tracking-wide">
+            Publications
+          </h2>
+        </div>
+
+        <div class="space-y-5">
+          <!-- Pub 1: Journal -->
+          <div class="brutal-card rounded-xl p-4 relative">
+            <div
+              class="absolute -top-3 -right-2 bg-red-600 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded shadow-md border border-slate-900 uppercase tracking-widest z-10"
+            >
+              Journal
+            </div>
+            <h3
+              class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
+            >
+              Quantifying the efficacy of scenario based jailbreaks on Llama
+              using HarmBench and LLM-as-a-judge
+            </h3>
+            <p class="text-xs text-slate-700 font-medium mb-2">
+              <span class="font-black text-slate-900 border-b-2 border-red-500"
+                >Abdullah, S.</span
+              >, Hossain, R. & Chowdhury, M.
+            </p>
+            <div
+              class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
+            >
+              <span class="font-mono text-slate-600 font-bold text-xs"
+                >Discov Artif Intell (2026)</span
+              >
+              <a
+                href="https://doi.org/10.1007/s44163-026-01816-w"
+                target="_blank"
+                class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors"
+              >
+                VIEW DOI <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pub 2: Journal -->
+          <div class="brutal-card rounded-xl p-4 relative">
+            <div
+              class="absolute -top-3 -right-2 bg-red-600 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded shadow-md border border-slate-900 uppercase tracking-widest z-10"
+            >
+              Journal
+            </div>
+            <h3
+              class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
+            >
+              Quantifying modality imbalance and visual jailbreak robustness in
+              LLaVA via projected gradient descent
+            </h3>
+            <p class="text-xs text-slate-700 font-medium mb-2">
+              <span class="font-black text-slate-900 border-b-2 border-red-500"
+                >Abdullah, S.</span
+              >, Hossain, R. & Chowdhury, M.
+            </p>
+            <div
+              class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
+            >
+              <span class="font-mono text-slate-600 font-bold text-xs"
+                >Discov Appl Sci (2026)</span
+              >
+              <a
+                href="https://doi.org/10.1007/s42452-026-08793-w"
+                target="_blank"
+                class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors"
+              >
+                VIEW DOI <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pub 3: Undergrad Thesis -->
+          <div class="brutal-card rounded-xl p-4 relative">
+            <div
+              class="absolute -top-3 -right-2 bg-slate-900 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded shadow-md border border-slate-900 uppercase tracking-widest z-10"
+            >
+              Undergrad Thesis
+            </div>
+            <h3
+              class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
+            >
+              Classification of Politically Aggressive Bengali Texts Using
+              Transformers
+            </h3>
+            <p class="text-xs text-slate-700 font-medium mb-2">
+              <span class="font-black text-slate-900 border-b-2 border-red-500"
+                >S. Abdullah</span
+              >, M. S. A. Forhad, M. S. Islam and M. O. Rahman
+            </p>
+            <div
+              class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
+            >
+              <span class="font-mono text-slate-600 font-bold text-xs"
+                >2023 26th ICCIT</span
+              >
+              <a
+                href="https://doi.org/10.1109/ICCIT60459.2023.10441014"
+                target="_blank"
+                class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors"
+              >
+                VIEW IEEE DOI <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pub 4: Thesis Supervision -->
+          <div class="brutal-card rounded-xl p-4 relative mt-5">
+            <div
+              class="absolute -top-3 -right-2 bg-blue-700 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded shadow-md border border-slate-900 uppercase tracking-widest z-10"
+            >
+              Thesis Supervision (East Delta Univ.)
+            </div>
+            <h3
+              class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
+            >
+              Bengali Speech Based Medical Assistant Using Retrieval Augmented
+              Generation for Symptom-Based Diagnosis and Treatment
+            </h3>
+            <p class="text-xs text-slate-700 font-medium mb-2">
+              D. Chowdhury,
+              <span class="font-black text-slate-900 border-b-2 border-red-500"
+                >S. Abdullah</span
+              >, R. Hossain, M. S. Arefin and M. M. M. Hussain
+            </p>
+            <div
+              class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
+            >
+              <span class="font-mono text-slate-600 font-bold text-xs"
+                >2026 5th ICSADL</span
+              >
+              <a
+                href="https://doi.org/10.1109/ICSADL67539.2026.11452021"
+                target="_blank"
+                class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors"
+              >
+                VIEW IEEE DOI <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pub 5: Thesis Supervision -->
+          <div class="brutal-card rounded-xl p-4 relative mt-5">
+            <div
+              class="absolute -top-3 -right-2 bg-blue-700 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded shadow-md border border-slate-900 uppercase tracking-widest z-10"
+            >
+              Thesis Supervision (East Delta Univ.)
+            </div>
+            <h3
+              class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
+            >
+              Improving Brain Tumor Detection Through Synthetic Data
+              Augmentation using Conditional GANs
+            </h3>
+            <p class="text-xs text-slate-700 font-medium mb-2">
+              A. M. Saimon,
+              <span class="font-black text-slate-900 border-b-2 border-red-500"
+                >S. Abdullah</span
+              >, R. Hossain, M. S. Arefin and M. M. M. Hussain
+            </p>
+            <div
+              class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
+            >
+              <span class="font-mono text-slate-600 font-bold text-xs"
+                >2026 5th ICSADL</span
+              >
+              <a
+                href="https://doi.org/10.1109/ICSADL67539.2026.11451880"
+                target="_blank"
+                class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors"
+              >
+                VIEW IEEE DOI <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- TEACHING / COURSES SECTION -->
+      <section id="teaching" class="space-y-5">
+        <div class="flex items-center gap-2 border-b-2 border-slate-900 pb-2">
+          <div class="bg-slate-900 text-white p-1.5 rounded-lg">
+            <i class="fas fa-chalkboard-user text-lg"></i>
+          </div>
+          <h2 class="text-xl font-black text-slate-900 uppercase tracking-wide">
+            Courses & Teaching at East Delta University
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Course 1 -->
+          <div class="brutal-card rounded-xl p-4">
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
+            >
+              <h3 class="font-black text-slate-900 text-base sm:text-lg">
+                CSE 411: Software Engineering & System Analysis and Design
+              </h3>
+              <span
+                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 whitespace-nowrap rounded-full uppercase tracking-wider shadow-sm"
+                >System Design & Architecture</span
+              >
+            </div>
+            <p class="text-xs font-bold text-red-600 mb-2 flex items-center">
+              <i class="fas fa-rocket mr-1.5"></i> Empowering future architects
+            </p>
+            <p class="text-sm text-slate-700 font-medium leading-snug">
+              Immersing students in the high-stakes world of modern engineering!
+              Leading dynamic modules on advanced requirement engineering and
+              crystal-clear use-case diagrams, while scaling up to
+              enterprise-grade system design concepts to build massively
+              resilient, production-ready applications.
+            </p>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="brutal-card rounded-xl p-4">
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
+            >
+              <h3 class="font-black text-slate-900 text-base sm:text-lg">
+                CSE 327 & CSE 338: Artificial Intelligence Theory & Laboratory
+              </h3>
+              <span
+                class="text-[10px] font-bold bg-slate-900 whitespace-nowrap text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                >Core Intelligence</span
+              >
+            </div>
+            <p class="text-xs font-bold text-red-600 mb-2 flex items-center">
+              <i class="fas fa-brain mr-1.5"></i> Exploring machine cognition
+            </p>
+            <p class="text-sm text-slate-700 font-medium leading-snug">
+              Guiding students through the fascinating evolution of artificial
+              intelligence. Bridging foundational core algorithms with
+              cutting-edge modern AI concepts, ensuring hands-on implementation
+              mastery through rigorous laboratory sessions.
+            </p>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="brutal-card rounded-xl p-4">
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
+            >
+              <h3 class="font-black text-slate-900 text-base sm:text-lg">
+                CSE 211: Data Structures
+              </h3>
+              <span
+                class="text-[10px] whitespace-nowrap font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                >Algorithmic Foundations</span
+              >
+            </div>
+            <p class="text-xs font-bold text-red-600 mb-2 flex items-center">
+              <i class="fas fa-code-branch mr-1.5"></i> Building efficient code
+              foundations
+            </p>
+            <p class="text-sm text-slate-700 font-medium leading-snug">
+              Laying down the core structural pillars of computer science.
+              Comprehensive exploration spanning from fundamental arrays to
+              complex trees, graphs, heaps, hash maps, and advanced memory
+              traversals for optimized performance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="space-y-5 pb-6">
+        <div class="flex items-center gap-2 border-b-2 border-slate-900 pb-2">
+          <div class="bg-slate-900 text-white p-1.5 rounded-lg">
+            <i class="fas fa-laptop-code text-lg"></i>
+          </div>
+          <h2 class="text-xl font-black text-slate-900 uppercase tracking-wide">
+            Proficiencies
+          </h2>
+        </div>
+
+        <div class="brutal-card rounded-xl p-4">
+          <h3
+            class="text-xs font-black text-slate-900 uppercase tracking-widest mb-3"
+          >
+            Languages & Frameworks
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+            >
+              <i class="fab fa-python text-blue-600 text-base"></i> Python
+            </span>
+            <span
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+            >
+              <i class="fas fa-fire text-red-500 text-base"></i> PyTorch
+            </span>
+            <span
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+            >
+              <i class="fas fa-code text-blue-500 text-base"></i> C++
+            </span>
+            <span
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+            >
+              <i class="fab fa-js-square text-amber-500 text-base"></i>
+              JavaScript
+            </span>
+            <span
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+            >
+              <i class="fab fa-react text-sky-500 text-base"></i> React JS
+            </span>
+            <span
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+            >
+              <i class="fab fa-react text-sky-500 text-base"></i> NextJS
+            </span>
+            <span
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+            >
+              <i class="fab fa-react text-sky-500 text-base"></i> Postman
+            </span>
+            <span
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+            >
+              <i class="fab fa-react text-sky-500 text-base"></i> Huggingface
+            </span>
+            <span
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+            >
+              <i class="fab fa-react text-sky-500 text-base"></i> PyTorch
+            </span>
+            <span
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+            >
+              <i class="fab fa-github text-slate-900 text-base"></i> Git
+            </span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-slate-900 text-slate-300 py-6 mt-8 border-t-4 border-red-600"
+    >
+      <div class="max-w-3xl mx-auto px-4 text-center space-y-1.5">
+        <p class="text-xs font-bold tracking-wider">
+          &copy; 2026 Saklain Abdullah
+        </p>
+        <p
+          class="text-[10px] text-slate-500 font-medium uppercase tracking-wide"
+        >
+          Designed for Academic Portfolio Review
+        </p>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
