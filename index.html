@@ -42,16 +42,16 @@
         scroll-behavior: smooth;
       }
 
-      /* High-contrast dark shadow effect for light cards */
+      /* Minimal shadow card effect */
       .brutal-card {
         background-color: #ffffff;
         border: 2px solid #0f172a;
-        box-shadow: 6px 6px 0px 0px #0f172a;
+        box-shadow: 2px 2px 0px 0px #0f172a;
         transition: all 0.2s ease-in-out;
       }
       .brutal-card:hover {
-        transform: translate(-2px, -2px);
-        box-shadow: 8px 8px 0px 0px #dc2626;
+        transform: translate(-1px, -1px);
+        box-shadow: 3px 3px 0px 0px #dc2626;
         border-color: #0f172a;
       }
     </style>
@@ -59,11 +59,11 @@
   <body
     class="bg-slate-50 text-slate-800 min-h-screen flex flex-col relative font-sans selection:bg-red-100 selection:text-red-700"
   >
-    <!-- DARK NAVIGATION BAR (Harmonious Balance) -->
+    <!-- DARK NAVIGATION BAR -->
     <nav
-      class="fixed w-full bg-slate-900 text-slate-100 z-40 border-b-4 border-red-600 shadow-lg"
+      class="fixed w-full bg-slate-900 text-slate-100 z-40 border-b-4 border-red-600"
     >
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex items-center justify-between h-14 sm:h-16">
           <div
             class="flex items-center space-x-2 cursor-pointer"
@@ -73,7 +73,7 @@
               >SAKLAIN<span class="text-red-500">.</span></span
             >
             <span
-              class="text-[10px] bg-slate-800 text-slate-300 border border-slate-600 px-2 py-0.5 rounded font-mono hidden sm:inline-block"
+              class="text-[10px] bg-slate-800 text-slate-300 border border-slate-600 px-2 py-0.5 rounded font-mono hidden sm:inline-block whitespace-nowrap"
             >
               PhD APPLICANT
             </span>
@@ -93,9 +93,9 @@
                 >Teaching</a
               >
               <a
-                href="#research"
+                href="#research-publications"
                 class="text-slate-300 nav-hover text-sm font-medium transition-colors"
-                >Research</a
+                >Research & Publications</a
               >
               <a
                 href="#professional"
@@ -103,13 +103,8 @@
                 >Professional</a
               >
               <a
-                href="#publications"
-                class="text-slate-300 nav-hover text-sm font-medium transition-colors"
-                >Publications</a
-              >
-              <a
                 href="mailto:saklain.a@eastdelta.edu.bd"
-                class="ml-2 px-3 py-1.5 bg-red-600 hover:bg-red-500 text-white text-xs font-bold rounded transition flex items-center gap-1.5 shadow-sm"
+                class="ml-2 px-3 py-1.5 bg-red-600 hover:bg-red-500 text-white text-xs font-bold rounded transition flex items-center gap-1.5 whitespace-nowrap"
               >
                 <i class="fas fa-envelope"></i> Contact
               </a>
@@ -131,7 +126,7 @@
       <!-- Mobile Dropdown -->
       <div
         id="mobile-menu"
-        class="hidden bg-slate-800 border-b border-slate-700 px-4 pt-2 pb-4 space-y-2 absolute w-full shadow-lg"
+        class="hidden bg-slate-800 border-b border-slate-700 px-4 pt-2 pb-4 space-y-2 absolute w-full"
       >
         <a
           href="#about"
@@ -144,9 +139,9 @@
           >Teaching</a
         >
         <a
-          href="#research"
+          href="#research-publications"
           class="text-slate-200 block px-3 py-2 hover:bg-slate-700 rounded text-sm"
-          >Research</a
+          >Research & Publications</a
         >
         <a
           href="#professional"
@@ -154,34 +149,29 @@
           >Professional</a
         >
         <a
-          href="#publications"
-          class="text-slate-200 block px-3 py-2 hover:bg-slate-700 rounded text-sm"
-          >Publications</a
-        >
-        <a
           href="mailto:saklain.a@eastdelta.edu.bd"
-          class="text-red-400 font-bold block px-3 py-2 text-sm"
+          class="text-red-400 font-bold block px-3 py-2 text-sm whitespace-nowrap"
         >
           <i class="fas fa-envelope mr-1"></i> Email Me
         </a>
       </div>
     </nav>
 
-    <!-- MAIN SINGLE-COLUMN CONTAINER -->
+    <!-- MAIN CONTAINER -->
     <main
-      class="pt-20 sm:pt-24 flex-grow max-w-3xl mx-auto px-4 sm:px-6 w-full space-y-12 py-8 fade-in"
+      class="pt-20 sm:pt-24 flex-grow max-w-5xl mx-auto px-4 sm:px-6 w-full space-y-12 py-8 fade-in"
     >
-      <!-- HERO / PROFILE SECTION -->
-      <section id="about" class="text-center pt-2 space-y-6">
+      <!-- SINGLE COLUMN: HERO / PROFILE SECTION -->
+      <section id="about" class="max-w-3xl mx-auto text-center pt-2 space-y-6">
         <!-- Circular Profile Image via Google Drive Link -->
         <div class="relative inline-block">
           <img
             src="https://github.com/SaklainAbdullah/portfolio/blob/main/propic.jpeg?raw=true"
             alt="Saklain Abdullah"
-            class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover object-top border-4 border-white shadow-xl ring-4 ring-slate-900 mx-auto bg-slate-200"
+            class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover object-top border-4 border-white ring-2 ring-slate-900 mx-auto bg-slate-200"
           />
           <span
-            class="absolute bottom-2 right-2 w-5 h-5 bg-emerald-500 border-2 border-white rounded-full shadow-md"
+            class="absolute bottom-2 right-2 w-5 h-5 bg-emerald-500 border-2 border-white rounded-full"
             title="Available for PhD Opportunities"
           ></span>
         </div>
@@ -210,7 +200,7 @@
 
         <!-- CATCHY EDUCATION SECTION -->
         <div
-          class="brutal-card rounded-xl p-4 flex flex-col items-center justify-center text-center gap-1 mt-2 bg-slate-900 text-white"
+          class="brutal-card rounded-xl p-4 flex flex-col items-center justify-center text-center gap-1 mt-2 bg-slate-900 text-white border-2 border-slate-900"
         >
           <i class="fas fa-graduation-cap text-2xl text-red-500 mb-1"></i>
           <h2
@@ -230,7 +220,7 @@
           <a
             href="https://scholar.google.com/citations?user=tTvgIAYAAAAJ&hl=en"
             target="_blank"
-            class="px-4 py-2 brutal-card rounded-lg text-slate-900 text-sm font-bold flex items-center gap-2"
+            class="px-4 py-2 brutal-card rounded-lg text-slate-900 text-sm font-bold flex items-center gap-2 whitespace-nowrap"
           >
             <i class="fas fa-graduation-cap text-red-600 text-base"></i> Google
             Scholar
@@ -238,106 +228,341 @@
           <a
             href="https://github.com/SaklainAbdullah"
             target="_blank"
-            class="px-4 py-2 brutal-card rounded-lg text-slate-900 text-sm font-bold flex items-center gap-2"
+            class="px-4 py-2 brutal-card rounded-lg text-slate-900 text-sm font-bold flex items-center gap-2 whitespace-nowrap"
           >
             <i class="fab fa-github text-slate-900 text-base"></i> GitHub
           </a>
           <a
             href="https://www.linkedin.com/in/saklain-abdullah/"
             target="_blank"
-            class="px-4 py-2 brutal-card rounded-lg text-slate-900 text-sm font-bold flex items-center gap-2"
+            class="px-4 py-2 brutal-card rounded-lg text-slate-900 text-sm font-bold flex items-center gap-2 whitespace-nowrap"
           >
             <i class="fab fa-linkedin text-blue-700 text-base"></i> LinkedIn
           </a>
         </div>
       </section>
 
-      <!-- RESEARCH EXPERIENCE -->
-      <section id="research" class="space-y-5">
-        <div class="flex items-center gap-2 border-b-2 border-slate-900 pb-2">
-          <div class="bg-slate-900 text-white p-1.5 rounded-lg">
-            <i class="fas fa-microscope text-lg"></i>
+      <!-- TWO-COLUMN SECTION: RESEARCH EXPERIENCE & PUBLICATIONS -->
+      <section
+        id="research-publications"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch pt-4"
+      >
+        <!-- Column 1: Research Experience -->
+        <div class="space-y-5 flex flex-col">
+          <div class="flex items-center gap-2 border-b-2 border-slate-900 pb-2">
+            <div class="bg-slate-900 text-white p-1.5 rounded-lg">
+              <i class="fas fa-microscope text-lg"></i>
+            </div>
+            <h2
+              class="text-xl font-black text-slate-900 uppercase tracking-wide"
+            >
+              Research Experience
+            </h2>
           </div>
-          <h2 class="text-xl font-black text-slate-900 uppercase tracking-wide">
-            Research Experience
-          </h2>
+
+          <div class="space-y-4 flex flex-col flex-grow justify-between">
+            <!-- Research Card 1 -->
+            <div
+              class="brutal-card rounded-xl p-5 flex flex-col justify-between flex-1"
+            >
+              <div>
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
+                >
+                  <h3 class="font-black text-slate-900 text-base sm:text-lg">
+                    Physics-Informed AI in Renewable Energy
+                  </h3>
+                  <span
+                    class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider whitespace-nowrap"
+                    >Jan 2026 – Present</span
+                  >
+                </div>
+                <p
+                  class="text-xs font-bold text-red-600 mb-2 flex items-center"
+                >
+                  <i class="fas fa-flask mr-1.5"></i> Research Lead: Dr. K. M
+                  Mohibul Kabir
+                </p>
+              </div>
+              <p class="text-sm text-slate-700 font-medium leading-relaxed">
+                Integrating rigorous physical laws and governing equations
+                directly into neural network loss landscapes. This project
+                focuses on optimizing complex renewable energy systems,
+                improving generalizability under sparse data regimes, and
+                designing dependable, physics-constrained simulation frameworks
+                for clean energy tech.
+              </p>
+            </div>
+
+            <!-- Research Card 2 -->
+            <div
+              class="brutal-card rounded-xl p-5 flex flex-col justify-between flex-1"
+            >
+              <div>
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
+                >
+                  <h3 class="font-black text-slate-900 text-base sm:text-lg">
+                    LLM/VLM Security & Robustness
+                  </h3>
+                  <span
+                    class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider whitespace-nowrap"
+                    >Mar 2025 – Present</span
+                  >
+                </div>
+                <p
+                  class="text-xs font-bold text-red-600 mb-2 flex items-center"
+                >
+                  <i class="fas fa-flask mr-1.5"></i> Supervisor: Dr.
+                  Mahfuzulhoq Chowdhury
+                </p>
+              </div>
+              <p class="text-sm text-slate-700 font-medium leading-relaxed">
+                Systematically investigating vulnerabilities, failure modes, and
+                safety alignment loopholes in large language and Vision-Language
+                models. Specialized focus areas include evaluating
+                scenario-based jailbreaks, multimodal safety dominance, visual
+                perturbation defenses, and quantitative mitigation strategies
+                against adversarial attacks.
+              </p>
+            </div>
+
+            <!-- Research Card 3 -->
+            <div
+              class="brutal-card rounded-xl p-5 flex flex-col justify-between flex-1"
+            >
+              <div>
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
+                >
+                  <h3 class="font-black text-slate-900 text-base sm:text-lg">
+                    Bengali Language Processing Thesis
+                  </h3>
+                  <span
+                    class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider whitespace-nowrap"
+                    >Jan 2022 – Nov 2023</span
+                  >
+                </div>
+                <p
+                  class="text-xs font-bold text-red-600 mb-2 flex items-center"
+                >
+                  <i class="fas fa-flask mr-1.5"></i> Advisor: Md Shafiul Alam
+                  Forhad (CUET)
+                </p>
+              </div>
+              <p class="text-sm text-slate-700 font-medium leading-relaxed">
+                Researched and benchmarked transformer-based text classification
+                architectures tailored specifically for low-resource Bengali
+                computational linguistics. Emphasized detecting aggressive and
+                polarized political expressions, curating domain-specific
+                tokenization pipelines, and optimizing deep learning models for
+                high semantic accuracy.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="space-y-4">
-          <!-- Research Card 1 -->
-          <div class="brutal-card rounded-xl p-4">
-            <div
-              class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
-            >
-              <h3 class="font-black text-slate-900 text-base sm:text-lg">
-                Physics-Informed AI in Renewable Energy
-              </h3>
-              <span
-                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
-                >Jan 2026 – Present</span
-              >
+        <!-- Column 2: Selected Publications -->
+        <div class="space-y-5">
+          <div class="flex items-center gap-2 border-b-2 border-slate-900 pb-2">
+            <div class="bg-slate-900 text-white p-1.5 rounded-lg">
+              <i class="fas fa-book-bookmark text-lg"></i>
             </div>
-            <p class="text-xs font-bold text-red-600 mb-2 flex items-center">
-              <i class="fas fa-flask mr-1.5"></i> Research Lead: Dr. K. M
-              Mohibul Kabir
-            </p>
-            <p class="text-sm text-slate-700 font-medium leading-snug">
-              Integrating physical laws into neural network architectures to
-              optimize and model complex renewable energy systems.
-            </p>
+            <h2
+              class="text-xl font-black text-slate-900 uppercase tracking-wide"
+            >
+              Publications
+            </h2>
           </div>
 
-          <!-- Research Card 2 -->
-          <div class="brutal-card rounded-xl p-4">
-            <div
-              class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
-            >
-              <h3 class="font-black text-slate-900 text-base sm:text-lg">
-                LLM/VLM Security & Robustness
-              </h3>
-              <span
-                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
-                >Mar 2025 – Present</span
+          <div class="space-y-5">
+            <!-- Pub 1: Journal -->
+            <div class="brutal-card rounded-xl p-4 relative">
+              <div
+                class="absolute -top-3 -right-2 bg-red-600 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded border border-slate-900 uppercase tracking-widest z-10 whitespace-nowrap"
               >
+                Journal
+              </div>
+              <h3
+                class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
+              >
+                Quantifying the efficacy of scenario based jailbreaks on Llama
+                using HarmBench and LLM-as-a-judge
+              </h3>
+              <p class="text-xs text-slate-700 font-medium mb-2">
+                <span
+                  class="font-black text-slate-900 border-b-2 border-red-500"
+                  >Abdullah, S.</span
+                >, Hossain, R. & Chowdhury, M.
+              </p>
+              <div
+                class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
+              >
+                <span
+                  class="font-mono text-slate-600 font-bold text-xs whitespace-nowrap"
+                  >Discov Artif Intell (2026)</span
+                >
+                <a
+                  href="https://doi.org/10.1007/s44163-026-01816-w"
+                  target="_blank"
+                  class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors whitespace-nowrap"
+                >
+                  VIEW DOI <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <p class="text-xs font-bold text-red-600 mb-2 flex items-center">
-              <i class="fas fa-flask mr-1.5"></i> Supervisor: Dr. Mahfuzulhoq
-              Chowdhury
-            </p>
-            <p class="text-sm text-slate-700 font-medium leading-snug">
-              Investigating vulnerabilities in large language and
-              Vision-Language models, focusing on scenario-based jailbreaking,
-              visual jailbreaks, and modality imbalances.
-            </p>
-          </div>
 
-          <!-- Research Card 3 -->
-          <div class="brutal-card rounded-xl p-4">
-            <div
-              class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2"
-            >
-              <h3 class="font-black text-slate-900 text-base sm:text-lg">
-                Bengali Language Processing Thesis
-              </h3>
-              <span
-                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
-                >Jan 2022 – Nov 2023</span
+            <!-- Pub 2: Journal -->
+            <div class="brutal-card rounded-xl p-4 relative">
+              <div
+                class="absolute -top-3 -right-2 bg-red-600 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded border border-slate-900 uppercase tracking-widest z-10 whitespace-nowrap"
               >
+                Journal
+              </div>
+              <h3
+                class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
+              >
+                Quantifying modality imbalance and visual jailbreak robustness
+                in LLaVA via projected gradient descent
+              </h3>
+              <p class="text-xs text-slate-700 font-medium mb-2">
+                <span
+                  class="font-black text-slate-900 border-b-2 border-red-500"
+                  >Abdullah, S.</span
+                >, Hossain, R. & Chowdhury, M.
+              </p>
+              <div
+                class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
+              >
+                <span
+                  class="font-mono text-slate-600 font-bold text-xs whitespace-nowrap"
+                  >Discov Appl Sci (2026)</span
+                >
+                <a
+                  href="https://doi.org/10.1007/s42452-026-08793-w"
+                  target="_blank"
+                  class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors whitespace-nowrap"
+                >
+                  VIEW DOI <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <p class="text-xs font-bold text-red-600 mb-2 flex items-center">
-              <i class="fas fa-flask mr-1.5"></i> Advisor: Md Shafiul Alam
-              Forhad (CUET)
-            </p>
-            <p class="text-sm text-slate-700 font-medium leading-snug">
-              Researched transformer-based text classification architectures
-              tailored to Bengali computational linguistics.
-            </p>
+
+            <!-- Pub 3: Undergrad Thesis -->
+            <div class="brutal-card rounded-xl p-4 relative">
+              <div
+                class="absolute -top-3 -right-2 bg-slate-900 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded border border-slate-900 uppercase tracking-widest z-10 whitespace-nowrap"
+              >
+                Undergrad Thesis
+              </div>
+              <h3
+                class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
+              >
+                Classification of Politically Aggressive Bengali Texts Using
+                Transformers
+              </h3>
+              <p class="text-xs text-slate-700 font-medium mb-2">
+                <span
+                  class="font-black text-slate-900 border-b-2 border-red-500"
+                  >S. Abdullah</span
+                >, M. S. A. Forhad, M. S. Islam and M. O. Rahman
+              </p>
+              <div
+                class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
+              >
+                <span
+                  class="font-mono text-slate-600 font-bold text-xs whitespace-nowrap"
+                  >2023 26th ICCIT</span
+                >
+                <a
+                  href="https://doi.org/10.1109/ICCIT60459.2023.10441014"
+                  target="_blank"
+                  class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors whitespace-nowrap"
+                >
+                  VIEW IEEE DOI <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Pub 4: Thesis Supervision -->
+            <div class="brutal-card rounded-xl p-4 relative mt-5">
+              <div
+                class="absolute -top-3 -right-2 bg-blue-700 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded border border-slate-900 uppercase tracking-widest z-10 whitespace-nowrap"
+              >
+                Thesis Supervision (East Delta Univ.)
+              </div>
+              <h3
+                class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
+              >
+                Bengali Speech Based Medical Assistant Using Retrieval Augmented
+                Generation for Symptom-Based Diagnosis and Treatment
+              </h3>
+              <p class="text-xs text-slate-700 font-medium mb-2">
+                D. Chowdhury,
+                <span
+                  class="font-black text-slate-900 border-b-2 border-red-500"
+                  >S. Abdullah</span
+                >, R. Hossain, M. S. Arefin and M. M. M. Hussain
+              </p>
+              <div
+                class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
+              >
+                <span
+                  class="font-mono text-slate-600 font-bold text-xs whitespace-nowrap"
+                  >2026 5th ICSADL</span
+                >
+                <a
+                  href="https://doi.org/10.1109/ICSADL67539.2026.11452021"
+                  target="_blank"
+                  class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors whitespace-nowrap"
+                >
+                  VIEW IEEE DOI <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Pub 5: Thesis Supervision -->
+            <div class="brutal-card rounded-xl p-4 relative mt-5">
+              <div
+                class="absolute -top-3 -right-2 bg-blue-700 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded border border-slate-900 uppercase tracking-widest z-10 whitespace-nowrap"
+              >
+                Thesis Supervision (East Delta Univ.)
+              </div>
+              <h3
+                class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
+              >
+                Improving Brain Tumor Detection Through Synthetic Data
+                Augmentation using Conditional GANs
+              </h3>
+              <p class="text-xs text-slate-700 font-medium mb-2">
+                A. M. Saimon,
+                <span
+                  class="font-black text-slate-900 border-b-2 border-red-500"
+                  >S. Abdullah</span
+                >, R. Hossain, M. S. Arefin and M. M. M. Hussain
+              </p>
+              <div
+                class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
+              >
+                <span
+                  class="font-mono text-slate-600 font-bold text-xs whitespace-nowrap"
+                  >2026 5th ICSADL</span
+                >
+                <a
+                  href="https://doi.org/10.1109/ICSADL67539.2026.11451880"
+                  target="_blank"
+                  class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors whitespace-nowrap"
+                >
+                  VIEW IEEE DOI <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- PROFESSIONAL EXPERIENCE -->
-      <section id="professional" class="space-y-5">
+      <!-- SINGLE COLUMN: PROFESSIONAL EXPERIENCE -->
+      <section id="professional" class="max-w-3xl mx-auto space-y-5">
         <div class="flex items-center gap-2 border-b-2 border-slate-900 pb-2">
           <div class="bg-slate-900 text-white p-1.5 rounded-lg">
             <i class="fas fa-briefcase text-lg"></i>
@@ -357,7 +582,7 @@
                 Lecturer, Dept. of CSE
               </h3>
               <span
-                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider whitespace-nowrap"
                 >Jan 2024 – Present</span
               >
             </div>
@@ -381,7 +606,7 @@
                 Software Engineer (Remote)
               </h3>
               <span
-                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider whitespace-nowrap"
                 >Jul 2023 – May 2025</span
               >
             </div>
@@ -404,7 +629,7 @@
                 Lead Instructor
               </h3>
               <span
-                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider whitespace-nowrap"
                 >Former</span
               >
             </div>
@@ -420,193 +645,8 @@
         </div>
       </section>
 
-      <!-- SELECTED PUBLICATIONS -->
-      <section id="publications" class="space-y-5">
-        <div class="flex items-center gap-2 border-b-2 border-slate-900 pb-2">
-          <div class="bg-slate-900 text-white p-1.5 rounded-lg">
-            <i class="fas fa-book-bookmark text-lg"></i>
-          </div>
-          <h2 class="text-xl font-black text-slate-900 uppercase tracking-wide">
-            Publications
-          </h2>
-        </div>
-
-        <div class="space-y-5">
-          <!-- Pub 1: Journal -->
-          <div class="brutal-card rounded-xl p-4 relative">
-            <div
-              class="absolute -top-3 -right-2 bg-red-600 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded shadow-md border border-slate-900 uppercase tracking-widest z-10"
-            >
-              Journal
-            </div>
-            <h3
-              class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
-            >
-              Quantifying the efficacy of scenario based jailbreaks on Llama
-              using HarmBench and LLM-as-a-judge
-            </h3>
-            <p class="text-xs text-slate-700 font-medium mb-2">
-              <span class="font-black text-slate-900 border-b-2 border-red-500"
-                >Abdullah, S.</span
-              >, Hossain, R. & Chowdhury, M.
-            </p>
-            <div
-              class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
-            >
-              <span class="font-mono text-slate-600 font-bold text-xs"
-                >Discov Artif Intell (2026)</span
-              >
-              <a
-                href="https://doi.org/10.1007/s44163-026-01816-w"
-                target="_blank"
-                class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors"
-              >
-                VIEW DOI <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Pub 2: Journal -->
-          <div class="brutal-card rounded-xl p-4 relative">
-            <div
-              class="absolute -top-3 -right-2 bg-red-600 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded shadow-md border border-slate-900 uppercase tracking-widest z-10"
-            >
-              Journal
-            </div>
-            <h3
-              class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
-            >
-              Quantifying modality imbalance and visual jailbreak robustness in
-              LLaVA via projected gradient descent
-            </h3>
-            <p class="text-xs text-slate-700 font-medium mb-2">
-              <span class="font-black text-slate-900 border-b-2 border-red-500"
-                >Abdullah, S.</span
-              >, Hossain, R. & Chowdhury, M.
-            </p>
-            <div
-              class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
-            >
-              <span class="font-mono text-slate-600 font-bold text-xs"
-                >Discov Appl Sci (2026)</span
-              >
-              <a
-                href="https://doi.org/10.1007/s42452-026-08793-w"
-                target="_blank"
-                class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors"
-              >
-                VIEW DOI <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Pub 3: Undergrad Thesis -->
-          <div class="brutal-card rounded-xl p-4 relative">
-            <div
-              class="absolute -top-3 -right-2 bg-slate-900 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded shadow-md border border-slate-900 uppercase tracking-widest z-10"
-            >
-              Undergrad Thesis
-            </div>
-            <h3
-              class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
-            >
-              Classification of Politically Aggressive Bengali Texts Using
-              Transformers
-            </h3>
-            <p class="text-xs text-slate-700 font-medium mb-2">
-              <span class="font-black text-slate-900 border-b-2 border-red-500"
-                >S. Abdullah</span
-              >, M. S. A. Forhad, M. S. Islam and M. O. Rahman
-            </p>
-            <div
-              class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
-            >
-              <span class="font-mono text-slate-600 font-bold text-xs"
-                >2023 26th ICCIT</span
-              >
-              <a
-                href="https://doi.org/10.1109/ICCIT60459.2023.10441014"
-                target="_blank"
-                class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors"
-              >
-                VIEW IEEE DOI <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Pub 4: Thesis Supervision -->
-          <div class="brutal-card rounded-xl p-4 relative mt-5">
-            <div
-              class="absolute -top-3 -right-2 bg-blue-700 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded shadow-md border border-slate-900 uppercase tracking-widest z-10"
-            >
-              Thesis Supervision (East Delta Univ.)
-            </div>
-            <h3
-              class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
-            >
-              Bengali Speech Based Medical Assistant Using Retrieval Augmented
-              Generation for Symptom-Based Diagnosis and Treatment
-            </h3>
-            <p class="text-xs text-slate-700 font-medium mb-2">
-              D. Chowdhury,
-              <span class="font-black text-slate-900 border-b-2 border-red-500"
-                >S. Abdullah</span
-              >, R. Hossain, M. S. Arefin and M. M. M. Hussain
-            </p>
-            <div
-              class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
-            >
-              <span class="font-mono text-slate-600 font-bold text-xs"
-                >2026 5th ICSADL</span
-              >
-              <a
-                href="https://doi.org/10.1109/ICSADL67539.2026.11452021"
-                target="_blank"
-                class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors"
-              >
-                VIEW IEEE DOI <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Pub 5: Thesis Supervision -->
-          <div class="brutal-card rounded-xl p-4 relative mt-5">
-            <div
-              class="absolute -top-3 -right-2 bg-blue-700 text-white text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded shadow-md border border-slate-900 uppercase tracking-widest z-10"
-            >
-              Thesis Supervision (East Delta Univ.)
-            </div>
-            <h3
-              class="font-black text-slate-900 text-base leading-snug mb-1 mt-1"
-            >
-              Improving Brain Tumor Detection Through Synthetic Data
-              Augmentation using Conditional GANs
-            </h3>
-            <p class="text-xs text-slate-700 font-medium mb-2">
-              A. M. Saimon,
-              <span class="font-black text-slate-900 border-b-2 border-red-500"
-                >S. Abdullah</span
-              >, R. Hossain, M. S. Arefin and M. M. M. Hussain
-            </p>
-            <div
-              class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-200"
-            >
-              <span class="font-mono text-slate-600 font-bold text-xs"
-                >2026 5th ICSADL</span
-              >
-              <a
-                href="https://doi.org/10.1109/ICSADL67539.2026.11451880"
-                target="_blank"
-                class="text-red-600 hover:text-slate-900 font-black text-xs flex items-center gap-1 transition-colors"
-              >
-                VIEW IEEE DOI <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- TEACHING / COURSES SECTION -->
-      <section id="teaching" class="space-y-5">
+      <!-- SINGLE COLUMN: TEACHING / COURSES SECTION -->
+      <section id="teaching" class="max-w-3xl mx-auto space-y-5">
         <div class="flex items-center gap-2 border-b-2 border-slate-900 pb-2">
           <div class="bg-slate-900 text-white p-1.5 rounded-lg">
             <i class="fas fa-chalkboard-user text-lg"></i>
@@ -626,7 +666,7 @@
                 CSE 411: Software Engineering & System Analysis and Design
               </h3>
               <span
-                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 whitespace-nowrap rounded-full uppercase tracking-wider shadow-sm"
+                class="text-[10px] font-bold bg-slate-900 text-white px-2 py-0.5 whitespace-nowrap rounded-full uppercase tracking-wider"
                 >System Design & Architecture</span
               >
             </div>
@@ -651,7 +691,7 @@
                 CSE 327 & CSE 338: Artificial Intelligence Theory & Laboratory
               </h3>
               <span
-                class="text-[10px] font-bold bg-slate-900 whitespace-nowrap text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                class="text-[10px] font-bold bg-slate-900 whitespace-nowrap text-white px-2 py-0.5 rounded-full uppercase tracking-wider"
                 >Core Intelligence</span
               >
             </div>
@@ -675,7 +715,7 @@
                 CSE 211: Data Structures
               </h3>
               <span
-                class="text-[10px] whitespace-nowrap font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm"
+                class="text-[10px] whitespace-nowrap font-bold bg-slate-900 text-white px-2 py-0.5 rounded-full uppercase tracking-wider"
                 >Algorithmic Foundations</span
               >
             </div>
@@ -693,8 +733,8 @@
         </div>
       </section>
 
-      <!-- SKILLS -->
-      <section id="skills" class="space-y-5 pb-6">
+      <!-- SINGLE COLUMN: SKILLS -->
+      <section id="skills" class="max-w-3xl mx-auto space-y-5 pb-6">
         <div class="flex items-center gap-2 border-b-2 border-slate-900 pb-2">
           <div class="bg-slate-900 text-white p-1.5 rounded-lg">
             <i class="fas fa-laptop-code text-lg"></i>
@@ -712,55 +752,45 @@
           </h3>
           <div class="flex flex-wrap gap-2">
             <span
-              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[1px_1px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
             >
               <i class="fab fa-python text-blue-600 text-base"></i> Python
             </span>
             <span
-              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[1px_1px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
             >
               <i class="fas fa-fire text-red-500 text-base"></i> PyTorch
             </span>
             <span
-              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[1px_1px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
             >
               <i class="fas fa-code text-blue-500 text-base"></i> C++
             </span>
             <span
-              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[1px_1px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
             >
               <i class="fab fa-js-square text-amber-500 text-base"></i>
               JavaScript
             </span>
             <span
-              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[1px_1px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
             >
               <i class="fab fa-react text-sky-500 text-base"></i> React JS
             </span>
             <span
-              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[1px_1px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
             >
               <i class="fab fa-react text-sky-500 text-base"></i> NextJS
             </span>
             <span
-              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[1px_1px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
             >
               <i class="fab fa-react text-sky-500 text-base"></i> Postman
             </span>
             <span
-              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
+              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[1px_1px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
             >
               <i class="fab fa-react text-sky-500 text-base"></i> Huggingface
-            </span>
-            <span
-              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
-            >
-              <i class="fab fa-react text-sky-500 text-base"></i> PyTorch
-            </span>
-            <span
-              class="px-3 py-1.5 bg-white text-slate-900 border-2 border-slate-900 rounded shadow-[3px_3px_0px_#0f172a] text-xs font-bold flex items-center gap-1.5"
-            >
-              <i class="fab fa-github text-slate-900 text-base"></i> Git
             </span>
           </div>
         </div>
